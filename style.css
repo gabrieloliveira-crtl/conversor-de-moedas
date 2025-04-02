@@ -43,8 +43,3 @@ section button:hover{
     transition: 1s;
     box-shadow: 10px 10px 15px black;
 }
-@media(max-width: 390px){
-    section{
-        paddi
-    }
-}
