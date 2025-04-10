@@ -21,6 +21,7 @@ section{
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
+    height: 500px;
 }
 /*  */
 #container{
@@ -47,4 +48,15 @@ section{
 #addTask:hover{
     background-color: rgba(0, 0, 255, 0.664);
     transition: 0.8s;
+}
+@media (max-width: 480px){
+    section{
+        padding: 8rem;
+    }
+    #container{
+        padding: 20px;
+    }
+    #taskInput{
+        width: 80px;
+    }
 }
