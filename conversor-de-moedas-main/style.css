@@ -1,0 +1,45 @@
+    /* configuraçoes basicas para respiro do site */
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    list-style: none;
+    text-decoration: none;
+}
+
+header{
+    padding:10px;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    background-color: rgb(0, 170, 255);
+}
+header img{
+    width: 3em;
+}
+section {
+    padding: 15.3rem;
+    background-color: blueviolet;
+    align-items: center;
+    display: flex;
+    justify-content: center;
+    background: linear-gradient(180deg, rgba(0, 0, 0, 0.628) 100%, rgba(0, 0, 0, 0.427) 3.77%), url(img/bgtarefas.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+section button{
+    padding: 10px;
+    background-color: black;
+    color: white;
+    border-radius: 15px;
+    border: white solid 2px;
+}
+section button a{
+    color: white;
+}
+section button:hover{
+    transform: scale(1.2,1.2);
+    transition: 1s;
+    box-shadow: 10px 10px 15px black;
+}
