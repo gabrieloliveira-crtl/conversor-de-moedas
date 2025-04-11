@@ -31,27 +31,40 @@ $tarefas = $conn->query("SELECT * FROM tarefas");
 
 <!DOCTYPE html>
 <html lang="pt-br">
+    
 <head>
     <meta charset="UTF-8">
+    <link rel="stylesheet" href="style.css">
     <title>Lista de Tarefas</title>
 </head>
 <body>
-    <h1>Minhas Tarefas</h1>
+<header>
+        <img src="task.png" alt="imagem principal">
+        <h1>Lista de Tarefa</h1>
+    </header>
 
-    <form method="POST">
-        <input type="text" name="titulo" placeholder="Digite a tarefa" required>
-        <button type="submit">Adicionar</button>
-    </form>
+<section>
 
-    <ul>
-        <?php while($tarefa = $tarefas->fetch_assoc()): ?>
-            <li>
-                <?php echo htmlspecialchars($tarefa['titulo']); ?>
-                <a href="?apagar=<?php echo $tarefa['id']; ?>" onclick="return confirm('Tem certeza que deseja apagar?');">
-                    🗑️ Apagar
-                </a>
-            </li>
-        <?php endwhile; ?>
-    </ul>
+    <div id="container">
+        
+        <h1>Minhas Tarefas</h1>
+        
+        <form method="POST">
+            <input type="text" name="titulo" placeholder="Digite a tarefa" required>
+            <button type="submit">Adicionar</button>
+        </form>
+        
+        <ul>
+            <?php while($tarefa = $tarefas->fetch_assoc()): ?>
+                <li>
+                    <?php echo htmlspecialchars($tarefa['titulo']); ?>
+                    <a href="?apagar=<?php echo $tarefa['id']; ?>" onclick="return confirm('Tem certeza que deseja apagar?');">
+                        🗑️ Apagar
+                    </a>
+                </li>
+            <?php endwhile; ?>
+        </ul>
+    </div>
+</section>
 </body>
 </html>
